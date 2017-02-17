@@ -661,8 +661,8 @@ angular.module('mentio', [])
                     });
                 });
 
-                element.bind('click', function () {
-                    controller.selectItem(scope.item);
+                element.bind('click', function (e) {
+                    controller.selectItem(scope.item, e);
                     return false;
                 });
             }
