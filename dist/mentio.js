@@ -662,7 +662,11 @@ angular.module('mentio', [])
                 });
 
                 element.bind('click', function (e) {
-                    controller.selectItem(scope.item, e);
+                    if (!!scope.item.isFilterButton){
+						controller.filterItems(scope.item, e);
+					} else {
+						controller.selectItem(scope.item, e);
+					}
                     return false;
                 });
             }
