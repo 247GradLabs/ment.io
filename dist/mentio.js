@@ -11,7 +11,7 @@ angular.module('mentio', [])
                 select: '&mentioSelect',
                 items: '=mentioItems',
                 typedTerm: '=mentioTypedTerm',
-                altId: '=mentioId',
+                altId: '@mentioId',
                 iframeElement: '=mentioIframeElement',
                 requireLeadingSpace: '=mentioRequireLeadingSpace',
                 selectNotFound: '=mentioSelectNotFound',
@@ -463,7 +463,7 @@ angular.module('mentio', [])
                 items: '=mentioItems',
 				mentionFilter: '=mentioItemsFilter',
                 triggerChar: '=mentioTriggerChar',
-                forElem: '=mentioFor',
+                forElem: '@mentioFor',
                 parentScope: '=mentioParentScope'
             },
             templateUrl: function(tElement, tAttrs) {
