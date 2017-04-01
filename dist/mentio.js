@@ -1144,13 +1144,13 @@ angular.module('mentio')
             while(obj !== getDocument().body) {
                 if (obj.style && obj.style.transform) {
 					if ((/translateY/i).test(obj.style.transform)) {
-						var transY = String(obj.style.transform).replace(/(.*)(translateY\()(\d+)px(\).*)/g, '$3');
+						var transY = String(obj.style.transform).replace(/(.*translateY\()(\d+)px(\).*)/ig, '$2');
 						if (transY){
 							coordinates.top += parseInt(transY);
 						}
 					}
 					if ((/translateX/i).test(obj.style.transform)) {
-						var transX = String(obj.style.transform).replace(/(.*)(translateX\()(\d+)px(\).*)/g, '$3');
+						var transX = String(obj.style.transform).replace(/(.*translateX\()(\d+)px(\).*)/ig, '$2');
 						if (transX){
 							coordinates.left += parseInt(transX);
 						}
